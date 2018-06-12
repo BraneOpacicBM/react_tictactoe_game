@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import Circle from './components/Circle/Circle';
 import Cross from './components/Cross/Cross';
 import Button from './components/Button/Button';
 import Headline from './components/Headline/Headline';
 import WhichTurn from './components/WhichTurn/WhichTurn';
+
+import './App.css';
 
 class App extends Component {
 
