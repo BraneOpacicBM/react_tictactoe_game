@@ -5,10 +5,10 @@ Tic-tac-toe React application
 
 
 ## First mobile screen
-![First Screen](src/assets/first.jpg "First screen on mobile")
+![First Screen](src/assets/first-resize.jpg "First screen on mobile")
 
 ## Second mobile screen
-![Second Screen](src/assets/second.jpg "First screen on mobile")
+![Second Screen](src/assets/second-resize.jpg "First screen on mobile")
 
 
 
