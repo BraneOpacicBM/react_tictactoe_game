@@ -2,13 +2,13 @@
 
 Tic-tac-toe React application
 
-## Screenshots
+
 
 ## First mobile screen
-![First Screen](src/assets/tictactoe1.jpg "First screen on mobile")
+![First Screen](./src/assets/tictactoe1.jpg "First screen on mobile")
 
 ## Second mobile screen
-![Second Screen](src/assets/tictactoe1.jpg "Second screen on mobile")
+![Second Screen](./src/assets/tictactoe1.jpg "Second screen on mobile")
 
 
 
