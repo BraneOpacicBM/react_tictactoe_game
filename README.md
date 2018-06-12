@@ -8,7 +8,7 @@ Tic-tac-toe React application
 ![First Screen](src/assets/first.jpg "First screen on mobile")
 
 ## Second mobile screen
-![First Screen](src/assets/first.jpg "First screen on mobile")
+![Second Screen](src/assets/second.jpg "First screen on mobile")
 
 
 
