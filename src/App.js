@@ -10,9 +10,7 @@ import './App.css';
 class App extends Component {
 
   state = {
-    board: ["", "", "",
-            "", "", "",
-            "", "", ""],
+    board: Array(9).fill(""),
     playerTurn: "X",
     message: "It's X's turn!",
     playableGame: true,
@@ -41,9 +39,7 @@ class App extends Component {
 
   buttonReset = () => {
     this.setState({
-      board: ["", "", "",
-              "", "", "",
-              "", "", ""],
+      board: Array(9).fill(""),
       playerTurn: "X",
       message: "It's X's turn!",
       playableGame: true,
@@ -54,61 +50,35 @@ class App extends Component {
 
   checkForWinner = (board) => {
 
-    if(board[0] !== "" && board[0] === board[1] && board[0] === board[2]){
-      this.setState({
-        message: board[0] + " is the winner!",
-        playableGame: false,
-        winningPosition: [0, 1, 2]
-      })
-    } else if(board[3] !== "" && board[3] === board[4] && board[3] === board[5]){
-      this.setState({
-        message: board[3] + " is the winner!",
-        playableGame: false,
-        winningPosition: [3, 4, 5]
-      })
-    } else if(board[6] !== "" && board[6] === board[7] && board[6] === board[8]){
-      this.setState({
-        message: board[6] + " is the winner!",
-        playableGame: false,
-        winningPosition: [6, 7, 8]
-      })
-    } else if(board[0] !== "" && board[0] === board[3] && board[0] === board[6]){
-      this.setState({
-        message: board[0] + " is the winner!",
-        playableGame: false,
-        winningPosition: [0, 3, 6]
-      })
-    } else if(board[1] !== "" && board[1] === board[4] && board[1] === board[7]){
-      this.setState({
-        message: board[1] + " is the winner!",
-        playableGame: false,
-        winningPosition: [1, 4, 7]
-      })
-    } else if(board[2] !== "" && board[2] === board[5] && board[2] === board[8]){
-      this.setState({
-        message: board[2] + " is the winner!",
-        playableGame: false,
-        winningPosition: [2, 5, 8]
-      })
-    } else if(board[0] !== "" && board[0] === board[4] && board[0] === board[8]){
-      this.setState({
-        message: board[0] + " is the winner!",
-        playableGame: false,
-        winningPosition: [0, 4, 8]
-      })
-    } else if(board[2] !== "" && board[2] === board[4] && board[2] === board[6]){
-      this.setState({
-        message: board[2] + " is the winner!",
-        playableGame: false,
-        winningPosition: [2, 4, 6]
-      })
-    } else  {
-      if([].concat(board).sort().reverse().pop() !== "") {
+
+    const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         this.setState({
-          message: "It's a draw!"
+          message: board[a] + " is the winner!",
+          playableGame: false,
+          winningPosition: [a, b, c]
         })
+      } else  {
+        if([].concat(board).sort().reverse().pop() !== "") {
+          this.setState({
+            message: "It's a draw!"
+          })
+        }
       }
     }
+    return null;
+
   }
 
   render() {
