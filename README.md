@@ -5,10 +5,10 @@ Tic-tac-toe React application
 
 
 ## First mobile screen
-![First Screen](./src/assets/tictactoe1.jpg "First screen on mobile")
+![First Screen](./src/assets/first.jpg "First screen on mobile")
 
 ## Second mobile screen
-![Second Screen](./src/assets/tictactoe2.jpg "Second screen on mobile")
+![Second Screen](./src/assets/second.jpg "Second screen on mobile")
 
 
 
@@ -20,6 +20,14 @@ Follow these steps to get you started after cloning the repo:
 ```
 npm install
 ```
+
+and then
+
+```
+npm start
+```
+
+The app should start on a localhost server which you can access via other devices on the same IP adress
 
 
 
