@@ -3,7 +3,7 @@ import redO from '../../assets/black-o.png';
 
 const circle = (props) => {
     return (
-        <div className="cell-container"><img className="icon" src={redO} alt=""/></div>
+        <div className="cell-container"><img className="icon" src={redO} alt={props.alt}/></div>
     )
 }
 

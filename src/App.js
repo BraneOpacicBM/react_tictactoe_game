@@ -85,9 +85,9 @@ class App extends Component {
 
     let boardCells = this.state.board.map((cell, i) => {
       if(!this.state.playableGame) {
-        return <div key={i} className={this.state.winningPosition.includes(i) ? "cell winningCell" : "cell"} data-cell={i}>{this.state.board[i] !== "" ? (this.state.board[i] === "X" ? <Cross /> : <Circle /> ) : null}</div>
+        return <div key={i} className={this.state.winningPosition.includes(i) ? "cell winningCell" : "cell"} data-cell={i}>{this.state.board[i] !== "" ? (this.state.board[i] === "X" ? <Cross alt="cross" /> : <Circle alt="circle" /> ) : null}</div>
       } else {
-        return <div key={i} className="cell" data-cell={i}>{this.state.board[i] !== "" ? (this.state.board[i] === "X" ? <Cross /> : <Circle /> ) : null}</div>
+        return <div key={i} className="cell" data-cell={i}>{this.state.board[i] !== "" ? (this.state.board[i] === "X" ? <Cross alt="cross" /> : <Circle alt="circle" /> ) : null}</div>
       }
     })
 

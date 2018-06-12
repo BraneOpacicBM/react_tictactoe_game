@@ -3,7 +3,7 @@ import redX from '../../assets/red-x.png';
 
 const cross = (props) => {
     return (
-        <div className="cell-container"><img className="icon" src={redX} alt=""/></div>
+        <div className="cell-container"><img className="icon" src={redX} alt={props.alt}/></div>
     )
 }
 
